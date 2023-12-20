@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>#To-Do</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 2L19.5 3.5L21 2V9.13L19 11.13V4.91H5V19.09H10.5V20.5L9 22L7.5 20.5L6 22L4.5 20.5L3 22V2L4.5 3.5L6 2L7.5 3.5L9 2L10.5 3.5L12 2L13.5 3.5L15 2L16.5 3.5L18 2M13 19.96L19.13 13.83L21.17 15.87L15.04 22H13V19.96M19.83 13.13L20.81 12.15L20.83 12.13C20.88 12.09 20.94 12.05 21 12.03C21.18 11.97 21.39 12 21.53 12.15L22.85 13.47C23.05 13.67 23.05 14 22.85 14.19L21.87 15.17L19.83 13.13M18 12.13L17.13 13H6V11H18V12.13M15.13 15L13.13 17H6V15H15.13M18 9V7H6V9H18Z" /></svg>
+        </div>
+    </header>
+    <aside>
+        <h1 id="home" class="" onmouseover="document.querySelector('#home').classList.add('active');" onmouseleave="document.querySelector('#home').classList.remove('active');">Home</h1>
+        <h1 id="projects-heading">Projects</h1> <!-- " Projects "  -->
+        <ul id="projects-list">
+            <li class="projects" onmouseover="document.querySelectorAll('.projects')[0].classList.add('active');" onmouseleave="document.querySelectorAll('.projects')[0].classList.remove('active');">Gym</li>
+            <li class="projects" onmouseover="document.querySelectorAll('.projects')[1].classList.add('active');" onmouseleave="document.querySelectorAll('.projects')[1].classList.remove('active');">Study</li>
+            <li class="projects" onmouseover="document.querySelectorAll('.projects')[2].classList.add('active');" onmouseleave="document.querySelectorAll('.projects')[2].classList.remove('active');">Work</li>
+        </ul>
+        <button class="newBtn">+</button>
+    </aside>
+    <main>
+        <div class="content">
+            <div class="card">
+                <div class="left">
+                    <input type="checkbox" name="status" id="status">
+                    <h1 class="title">Title</h1>
+                </div>
+                <div class="right">
+                    <button id="details">Details</button>
+                    <span id="date">25 / 12 / 2023</span>
+                    <button id="deleteBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8,9H16V19H8V9M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z" /></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="left">
+                    <input type="checkbox" name="status" id="status">
+                    <h1 class="title">Title</h1>
+                </div>
+                <div class="right">
+                    <button id="details">Details</button>
+                    <span id="date">25 / 12 / 2023</span>
+                    <button id="deleteBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8,9H16V19H8V9M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z" /></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
