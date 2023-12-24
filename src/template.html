@@ -7,6 +7,53 @@
     <title>To-Do List</title>
 </head>
 <body>
+    <div class="new-dialog-box new-dialog-box-invisible">
+        <div class="container">
+            <div class="container-header">
+                <h2 id="new-dialog-heading">Create New ...</h2>
+                <button id="closeBtn" class="btn" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"/></svg>
+                </button>
+            </div>
+            <div class="container-aside">
+                <h2 class="category active">"To-Do"</h2>
+                <h2 class="category">Project</h2>
+            </div>
+            <div class="container-main">
+                <div class="form-top">
+                    <input type="text" id="form-title" placeholder="Title...">
+                    <textarea id="form-description" rows="7" placeholder="Description..."></textarea>
+                </div>
+                <div class="form-bottom">
+                    <form class="date" action="#">
+                        <p id="due-date" >Due Date :</p>
+                        <input type="date" id="form-date" class="outline-btn" required>
+                        <button class="outline-btn btn" id="createBtn" type="button">Create</button>
+                    </form>
+                    <div class="priority">
+                        <p>Priority :</p>
+                        <button class="outline-btn btn priority-btns" id="low" type="button">Low</button>
+                        <button class="outline-btn btn priority-btns" id="medium" type="button">Medium</button>
+                        <button class="outline-btn btn priority-btns" id="high" type="button">High</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="details-dialog-box details-dialog-box-invisible">
+        <div class="details-container">
+            <div class="details-container-header">
+                <h2 id="details-title">Title</h2>
+                <button id="details-close-btn" class="btn" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"/></svg>
+                </button>
+            </div>
+            <div class="details-container-main">
+                <p id="details-description">This is the description.</p>
+                <p id="details-date">25 / 12 / 2023</p>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="logo">
             <h1>#To-Do</h1>
@@ -14,44 +61,13 @@
         </div>
     </header>
     <aside>
-        <h1 id="home" class="" onmouseover="document.querySelector('#home').classList.add('active');" onmouseleave="document.querySelector('#home').classList.remove('active');">Home</h1>
-        <h1 id="projects-heading">Projects</h1> <!-- " Projects "  -->
-        <ul id="projects-list">
-            <li class="projects" onmouseover="document.querySelectorAll('.projects')[0].classList.add('active');" onmouseleave="document.querySelectorAll('.projects')[0].classList.remove('active');">Gym</li>
-            <li class="projects" onmouseover="document.querySelectorAll('.projects')[1].classList.add('active');" onmouseleave="document.querySelectorAll('.projects')[1].classList.remove('active');">Study</li>
-            <li class="projects" onmouseover="document.querySelectorAll('.projects')[2].classList.add('active');" onmouseleave="document.querySelectorAll('.projects')[2].classList.remove('active');">Work</li>
-        </ul>
-        <button class="newBtn">+</button>
+        <h3 id="home" class="active">"Home"</h3>
+        <h2 id="projects-heading" data-current-project="home">Projects</h2>
+        <ul id="projects-list"></ul>
+        <button class="newBtn btn" type="button">+</button>
     </aside>
     <main>
-        <div class="content">
-            <div class="card">
-                <div class="left">
-                    <input type="checkbox" name="status" id="status">
-                    <h1 class="title">Title</h1>
-                </div>
-                <div class="right">
-                    <button id="details">Details</button>
-                    <span id="date">25 / 12 / 2023</span>
-                    <button id="deleteBtn">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8,9H16V19H8V9M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z" /></svg>
-                    </button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="left">
-                    <input type="checkbox" name="status" id="status">
-                    <h1 class="title">Title</h1>
-                </div>
-                <div class="right">
-                    <button id="details">Details</button>
-                    <span id="date">25 / 12 / 2023</span>
-                    <button id="deleteBtn">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8,9H16V19H8V9M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z" /></svg>
-                    </button>
-                </div>
-            </div>
-        </div>
+        <div class="content"></div>
     </main>
 </body>
 </html>
