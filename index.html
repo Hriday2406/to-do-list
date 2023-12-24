@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+<script defer src="main.js"></script></head>
+<body>
+    <div class="new-dialog-box new-dialog-box-invisible">
+        <div class="container">
+            <div class="container-header">
+                <h2 id="new-dialog-heading">Create New ...</h2>
+                <button id="closeBtn" class="btn" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"/></svg>
+                </button>
+            </div>
+            <div class="container-aside">
+                <h2 class="category active">"To-Do"</h2>
+                <h2 class="category">Project</h2>
+            </div>
+            <div class="container-main">
+                <div class="form-top">
+                    <input type="text" id="form-title" placeholder="Title...">
+                    <textarea id="form-description" rows="7" placeholder="Description..."></textarea>
+                </div>
+                <div class="form-bottom">
+                    <form class="date" action="#">
+                        <p id="due-date" >Due Date :</p>
+                        <input type="date" id="form-date" class="outline-btn" required>
+                        <button class="outline-btn btn" id="createBtn" type="button">Create</button>
+                    </form>
+                    <div class="priority">
+                        <p>Priority :</p>
+                        <button class="outline-btn btn priority-btns" id="low" type="button">Low</button>
+                        <button class="outline-btn btn priority-btns" id="medium" type="button">Medium</button>
+                        <button class="outline-btn btn priority-btns" id="high" type="button">High</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="details-dialog-box details-dialog-box-invisible">
+        <div class="details-container">
+            <div class="details-container-header">
+                <h2 id="details-title">Title</h2>
+                <button id="details-close-btn" class="btn" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"/></svg>
+                </button>
+            </div>
+            <div class="details-container-main">
+                <p id="details-description">This is the description.</p>
+                <p id="details-date">25 / 12 / 2023</p>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="logo">
+            <h1>#To-Do</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 2L19.5 3.5L21 2V9.13L19 11.13V4.91H5V19.09H10.5V20.5L9 22L7.5 20.5L6 22L4.5 20.5L3 22V2L4.5 3.5L6 2L7.5 3.5L9 2L10.5 3.5L12 2L13.5 3.5L15 2L16.5 3.5L18 2M13 19.96L19.13 13.83L21.17 15.87L15.04 22H13V19.96M19.83 13.13L20.81 12.15L20.83 12.13C20.88 12.09 20.94 12.05 21 12.03C21.18 11.97 21.39 12 21.53 12.15L22.85 13.47C23.05 13.67 23.05 14 22.85 14.19L21.87 15.17L19.83 13.13M18 12.13L17.13 13H6V11H18V12.13M15.13 15L13.13 17H6V15H15.13M18 9V7H6V9H18Z" /></svg>
+        </div>
+    </header>
+    <aside>
+        <h3 id="home" class="active">"Home"</h3>
+        <h2 id="projects-heading" data-current-project="home">Projects</h2>
+        <ul id="projects-list"></ul>
+        <button class="newBtn btn" type="button">+</button>
+    </aside>
+    <main>
+        <div class="content"></div>
+    </main>
+</body>
+</html>
